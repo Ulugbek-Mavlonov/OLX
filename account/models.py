@@ -11,8 +11,8 @@ class CustomUser(AbstractUser):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     
-class Profile(AbstractUser):
-    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+class Profile(models.Model):
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='profile')
     about = models.ImageField(upload_to='images/%Y/%m/%d/')
     birth_date = models.DateField(blank=True)
     skills = models.CharField(max_length=200)
