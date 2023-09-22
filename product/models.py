@@ -19,13 +19,6 @@ class Category(models.Model):
         ordering = ['name',]
         verbose_name = 'category'
         verbose_name_plural = 'categories'
->>>>>>> bf8a4b6a47896497632f5b08c313d1263e22f242
-    
-
-    
-<<<<<<< HEAD
-
-
 
 
 class Product(models.Model):
@@ -48,11 +41,7 @@ class Product(models.Model):
         ordering = ['name',]
         verbose_name = 'product'
         verbose_name_plural = 'products'
-    
-    
->>>>>>> bf8a4b6a47896497632f5b08c313d1263e22f242
 
-    
     
 class City(models.Model):
     id = models.IntegerField(primary_key=True)
