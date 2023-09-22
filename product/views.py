@@ -1,6 +1,6 @@
 from rest_framework import generics
 
-from django.contrib.auth import City, District
+from .models import City, District
 
 
 class CityViewSet(generics.ListAPIView):
