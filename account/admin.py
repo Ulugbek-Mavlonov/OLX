@@ -6,9 +6,9 @@ from . import models
 @admin.register(models.CustomUser)
 class CustomUserAdmin(admin.ModelAdmin):
     list_display = ['id', 'first_name', 'role','email', 'created']
-    list_display_links = ('email')
+    list_display_links = ('email',)
     
 @admin.register(models.Profile)
 class ProfileAdmin(admin.ModelAdmin):
-    list_display = ['user', 'skills', 'created']
+    list_display = ['user', 'skills',]
 

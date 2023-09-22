@@ -1,12 +1,11 @@
-from rest_framework import routers
-from .views import CustomUserViewSet, ProfileViewSet
-from django.urls import path, include
+from django.urls import path
 
-router = routers.DefaultRouter()
-router.register(r'custom-users', CustomUserViewSet)
-router.register(r'profiles', ProfileViewSet)
+from .views import UserRegisterView, UserEditAPIView, UserRetrieveAPIView
+
 
 urlpatterns = [
-    path('api/', include(router.urls)),
-    
+    path('register/', UserRegisterView.as_view(), name='auth_register'),
+    path('detail/<int:pk>/', UserRetrieveAPIView.as_view(), name='user_detail'),
+    path('update/', UserEditAPIView.as_view(), name='user_update'),
+
 ]

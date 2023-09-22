@@ -33,6 +33,9 @@ class Migration(migrations.Migration):
                 ('user', models.IntegerField()),
                 ('city', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='product.city')),
             ],
+            
+        ),
+        migrations.CreateModel(
             name='Category',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
